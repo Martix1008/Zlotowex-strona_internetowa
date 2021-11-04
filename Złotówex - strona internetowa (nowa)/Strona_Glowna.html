@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Złotówex - strona glówna</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <link rel="stylesheet" href="style_popr.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+</head>
+  <body>
+    <header>
+      <div class="naglowek">
+        <img src="Logo (1300x450).png">
+      </div>
+    </header>
+
+
+    <!-- Navbar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <!-- Zdjęcie i tytuł -->
+      <div class="container-fluid">
+        <img src="Znaczek.png" alt="" width="50" height="50" class="d-inline-block align-text-top">
+        <a class="navbar-brand">ZŁOTÓWEX</a> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Przyciski do konkretnych stron -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Strona_Glowna.html">Strona Główna</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Flota.html">Flota</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Cennik.html">Cennik</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Pracownicy.html">Pracownicy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Kontakt.html">Kontakt</a>
+            </li>
+            <li class="form-inline">
+              <a class="nav-link" href="">Zaloguj się</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <!-- Slider aka carousel -->
+    <!-- Przyciski do konkretnego zdjęcia -->
+    <div class="slider">
+      <div id="carouselExampleCaptions" class="carousel slide hidden-xs" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Pierwsze zdjęcie -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="Flota.html"><img src="slider-1.jpg" class="d-block w-100" alt="..."></a>
+            <div class="carousel-caption d-none d-md-block">
+              <h4>Nasza Flota</h4>
+            </div>
+          </div>
+
+          <!-- Drugie zdjęcie -->
+          <div class="carousel-item">
+            <a href="Kontakt.html"><img src="slider-2.jpg" class="d-block w-100" alt="..."></a>
+            <div class="carousel-caption d-none d-md-block">
+              <h4>Kontakt</h4>
+            </div>
+          </div>
+
+          <!-- Trzecie zdjęcie -->
+          <div class="carousel-item">
+            <a href="Pracownicy.html"><img src="slider-3.jpg" class="d-block w-100" alt="..."></a>
+            <div class="carousel-caption d-none d-md-block">
+              <h4>Pracownicy</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Przyciski przód, tył -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+
+    <!-- Main content -->
+    <main class="main">
+      <div class="tytul">
+        <h1>Dlaczego my?</h1>
+      </div>
+      <section class="podwojny">
+        <div class="podwojny1">  
+          <p>1. Niska taryfa dla kursów nocnych i dziennych</p>
+          <p>2. Działamy na całym obszarze Krakowa.</p>
+          <p>3. Dzięki aplikacji szybko zamówisz kurs.</p>
+          <p>4. Posiadamy najniższe ceny w Krakowie.</p>
+        </div>
+        <div class="podwojny-img">
+          <img src="dlaczego-my-img.jpg">
+        </div>
+      </section>
+
+      
+      <div class="tytul">
+        <h1>Oferta</h1> 
+      </div>
+
+        <section class="poczworny">
+          <div class="poczworny1">
+            <img src="oferta-img1.jpg">
+            <div class="poczworny-text">
+              <p>Możliwość zamówienia kursu z kadego miejsca w Krakowie.</p>
+            </div>
+          </div>
+
+          <div class="poczworny1">
+            <img src="oferta-img2.jpg">
+            <div class="poczworny-text">
+              <p>Posiadamy dogodne ceny rozliczeń takie jak: karta płatnicza, czy karta stałego klienta.</p>
+            </div>
+          </div>
+
+          <div class="poczworny1">
+            <img src="oferta-img3.jpg" width="150px" height="150px">
+            <div class="poczworny-text">
+              <p>Moliwość zamówienia taksówki do dowozu osób na wydarzenie.</p> 
+            </div>
+          </div>
+
+          <div class="poczworny1"> 
+            <img src="oferta-img4.jpg">
+            <div class="poczworny-text">
+              <p>Moliwość zakupienia swojej reklamy na nasze samochody.</p>
+            </div>
+          </div>
+        </section>
+
+      <div class="tytul">
+        <h1>Kontakt</h1>
+      </div>
+
+        <section class="kontakt">
+        </section>
+    
+    </main>
+
+    <footer>
+      <p>Serwis wykorzystuje pliki cookies m.in. w celu poprawienia jej dostępności, personalizacji, obsługi kont użytkowników czy aby zbierać dane, dotyczące ruchu na stronie.</p>
+    </footer>
+
+
+    <!-- JS Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
