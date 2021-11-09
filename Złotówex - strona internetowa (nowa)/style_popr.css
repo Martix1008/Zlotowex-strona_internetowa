@@ -160,6 +160,10 @@ footer{
     margin: auto;
 }
 
+nav ul li{
+    padding-right: 1.65em;
+}
+
 
 @media screen and (max-width: 1030px) {
     .slider{
