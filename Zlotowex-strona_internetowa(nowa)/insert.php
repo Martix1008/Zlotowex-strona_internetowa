@@ -12,7 +12,6 @@ if(isset($_POST['submit']))
     if(!$insert)
     {
         echo mysqli_error();
-    
     }
     else{
         echo "Twoja wiadomość została wysłana";
