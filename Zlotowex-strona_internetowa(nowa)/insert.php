@@ -15,8 +15,9 @@ if(isset($_POST['submit']))
     
     }
     else{
-        echp "Twoja wiadomość została wysłana"
+        echo "Twoja wiadomość została wysłana";
     }
 
     mysqli_close($db);
-    ?>
+}
+?>
