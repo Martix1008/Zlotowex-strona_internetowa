@@ -37,7 +37,6 @@
                 </div>
             </div>
         </nav>
-
             <?php
                 $servername = "localhost";
                 $username = "Marcin";
@@ -65,7 +64,6 @@
 
                 mysqli_close($conn);
             ?>
-        </div>
 
 
         <!-- JS Bootstrap script -->
