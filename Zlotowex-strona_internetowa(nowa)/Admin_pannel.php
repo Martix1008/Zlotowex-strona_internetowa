@@ -18,7 +18,7 @@
     </header>
 
         <!-- Navbar -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <!-- Zdjęcie i tytuł -->
             <div class="container-fluid">
                 <img src="Znaczek.png" alt="" width="50" height="50" class="d-inline-block align-text-top">
@@ -31,62 +31,45 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Strona_Glowna.html">Strona Główna</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Flota.html">Flota</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Cennik.html">Cennik</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Pracownicy.html">Pracownicy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Kontakt.html">Kontakt</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Zaloguj_sie.html">Zaloguj się</a>
+                            <a class="nav-link active" aria-current="page" href="Strona_Glowna.html">Wyloguj się</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <aside>
-            <p>Witaj Admin</p>
-            <p>Wyświetl baze danych</p>
-        </aside>
 
-        <main>
-        <?php
-            $servername = "localhost";
-            $username = "Marcin";
-            $password = "Martix1008";
-            $dbname = "Kontakt";
 
-            // Create connection
-            $conn = mysqli_connect($servername, $username, $password, $dbname);
-            // Check connection
-            if (!$conn) {
-                die("Connection failed: " . mysqli_connect_error());
-            }
+            <div>
+            <?php
+                $servername = "localhost";
+                $username = "Marcin";
+                $password = "Martix1008";
+                $dbname = "Kontakt";
 
-            $sql = "SELECT id, Imie, Tekst FROM Formularz_kontaktowy";
-            $result = mysqli_query($conn, $sql);
+                // Create connection
+                $conn = mysqli_connect($servername, $username, $password, $dbname);
+                // Check connection
+                if (!$conn) {
+                    die("Connection failed: " . mysqli_connect_error());
+                }
 
-            if (mysqli_num_rows($result) > 0) {
-            // output data of each row
-            while($row = mysqli_fetch_assoc($result)) {
-                echo "id: " . $row["id"]. " - Name: " . $row["Imie"]. " - Tekst: " .  $row["Tekst"] . " " . "<br>";
-            }
-            } else {
-                echo "0 results";
-            }
+                $sql = "SELECT id, Imie, Tekst FROM Formularz_kontaktowy";
+                $result = mysqli_query($conn, $sql);
 
-            mysqli_close($conn);
+                if (mysqli_num_rows($result) > 0) {
+                // output data of each row
+                while($row = mysqli_fetch_assoc($result)) {
+                    echo "id: " . $row["id"]. "<br>" . "Name: " . $row["Imie"]. "<br>" . "E-mail" . $row["E-mail"]. "<br>" . "Tekst: " .  $row["Tekst"] . " " . "<br>" . "<br>";
+                }
+                } else {
+                    echo "0 results";
+                }
+
+                mysqli_close($conn);
             ?>
-        </main>
+            </div>
+        </div>
 
 
         <!-- JS Bootstrap script -->

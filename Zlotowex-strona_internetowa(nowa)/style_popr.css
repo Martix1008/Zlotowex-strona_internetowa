@@ -165,6 +165,12 @@ nav ul li{
 }
 
 
+.sidebar{
+    height: 100%;
+}
+
+
+
 @media screen and (max-width: 1030px) {
     .slider{
         height: 300px;
