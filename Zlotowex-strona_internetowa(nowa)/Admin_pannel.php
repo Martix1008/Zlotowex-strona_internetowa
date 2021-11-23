@@ -38,9 +38,6 @@
             </div>
         </nav>
 
-
-
-            <div>
             <?php
                 $servername = "localhost";
                 $username = "Marcin";
@@ -60,15 +57,14 @@
                 if (mysqli_num_rows($result) > 0) {
                 // output data of each row
                 while($row = mysqli_fetch_assoc($result)) {
-                    echo "id: " . $row["id"]. "<br>" . "Name: " . $row["Imie"]. "<br>" . "E-mail" . $row["E-mail"]. "<br>" . "Tekst: " .  $row["Tekst"] . " " . "<br>" . "<br>";
+                    echo "id: " . $row["id"]. "<br>" . "Name: " . $row["Imie"]. "<br>" . "E-mail: " . $row["E-mail"]. "<br>" . "Tekst: " .  $row["Tekst"] . " " . "<br>" . "<br>";
                 }
                 } else {
-                    echo "0 results";
+                    echo "Nie ma wyników";
                 }
 
                 mysqli_close($conn);
             ?>
-            </div>
         </div>
 
 
