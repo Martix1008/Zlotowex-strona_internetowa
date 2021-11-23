@@ -51,7 +51,7 @@
                     die("Connection failed: " . mysqli_connect_error());
                 }
 
-                $sql = "SELECT id, Imie, Tekst FROM Formularz_kontaktowy";
+                $sql = "SELECT `id`, `Imie`, `E-mail`, `Tekst` FROM Formularz_kontaktowy";
                 $result = mysqli_query($conn, $sql);
 
                 if (mysqli_num_rows($result) > 0) {

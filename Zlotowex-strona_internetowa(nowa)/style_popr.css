@@ -170,6 +170,10 @@ nav ul li{
 }
 
 
+.show-questions{
+    margin: auto;
+}
+
 
 @media screen and (max-width: 1030px) {
     .slider{
