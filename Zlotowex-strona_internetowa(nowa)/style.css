@@ -83,6 +83,12 @@ nav ul li{
 
 }
 
+.main h2{
+    font-size: 45px;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: 2px;
+}
+
 .tytul{
     background: url("Line 1.png");
     background-size: 2000px 5px;
@@ -188,8 +194,13 @@ nav ul li{
         font-size: 20px;
     }
 
+    .main h2{
+        font-size: 35px;
+    }
+
     .podwojny-img{
         size: 300px 150px;
+        margin: auto;
     }
 
     .podwojny-google{
@@ -239,10 +250,6 @@ nav ul li{
     .main h1{
         font-size: 40px;
         width: 200px;
-    }
-
-    .main p{
-        font-size: 20px;
     }
 
     .podwojny-img{
