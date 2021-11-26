@@ -99,6 +99,15 @@ nav ul li{
     margin-top: 25px;
 }
 
+.oddzielnik{
+    background: url("Line 1.png");
+    background-size: 1420px 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
 
 .podwojny{
     display: flex;
