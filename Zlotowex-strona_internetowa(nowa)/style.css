@@ -198,6 +198,14 @@ nav ul li{
     .main h2{
         font-size: 40px;
     }
+
+    .slider{
+        height: 400px;
+    }
+
+    .slider img{
+        height: 400px;
+    }
 }
 
 @media screen and (max-width: 1030px) {
@@ -258,12 +266,11 @@ nav ul li{
     }
 
     .slider{
-        height: 150px;
-        width: 55%;
+        height: 200px;
     }
 
     .slider img{
-        height: 150px;
+        height: 200px;
     }
 
     .main h1{
@@ -274,6 +281,4 @@ nav ul li{
     .podwojny-img{
         width: 80%;
     }
-
-
 }
