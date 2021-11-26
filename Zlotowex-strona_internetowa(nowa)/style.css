@@ -149,6 +149,7 @@ footer{
     color: white;
     text-align: center;
     margin-top: 20px;
+
 }
 
 
@@ -183,6 +184,10 @@ nav ul li{
 @media screen and (max-width: 1300px) {
     .main p{
         font-size: 25px;
+    }
+
+    .main h2{
+        font-size: 40px;
     }
 }
 
