@@ -71,9 +71,10 @@
 
             if($count == 1){
                 echo "<h1><center> Udane logowanie </center></h1>";
+                echo "<a href='Admin_pannel.php'>Wyświetl zapytania</a>";
             }
             else{
-                echo "<h1>Błędny login lub haslo.</h1>";
+                echo "<h1><center>Błędny login lub haslo.</center></h1>";
             }
         ?>
     </body>
