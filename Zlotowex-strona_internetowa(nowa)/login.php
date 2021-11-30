@@ -71,11 +71,14 @@
 
             if($count == 1){
                 echo "<h1><center> Udane logowanie </center></h1>";
-                echo "<a href='Admin_pannel.php'>Wyświetl zapytania</a>";
+                echo "<center><h2><a href='Admin_pannel.php'>Wyświetl zapytania</a></h2></center>";
             }
             else{
                 echo "<h1><center>Błędny login lub haslo.</center></h1>";
             }
         ?>
+
+        <!-- JS Bootstrap script -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>
