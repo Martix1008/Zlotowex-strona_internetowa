@@ -18,7 +18,17 @@
         $Login = mysqli_real_escape_string($db, $Login);
         $Haslo = mysqli_real_escape_string($db, $Haslo);
 
-        $sql = "SELECT * FROM Użytkownicy where Login = "
+        $sql = "SELECT * FROM Użytkownicy where Login = '$Login' and Haslo = '$Haslo'";
+        $result = mysqli_query($db, $sql);
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        $count = mysqli_num_rows($result);
+
+        if($count == 1){
+            echo "<h1><center> Udane logowanie </center></h1>";
+        }
+        else{
+            echo "<h1>Błędny login lub haslo.</h1>";
+        }
     ?>
 </body>
 </html>
