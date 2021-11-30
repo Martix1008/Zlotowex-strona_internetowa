@@ -12,6 +12,13 @@
         $Login = $_POST['Login'];
         $Haslo = $_POST['Haslo'];
 
+        //to prevent from mysqli injection
+        $Login = stripcslashes($Login);
+        $Haslo = stripcslashes($Halo);
+        $Login = mysqli_real_escape_string($db, $Login);
+        $Haslo = mysqli_real_escape_string($db, $Haslo);
+
+        $sql = "SELECT * FROM Użytkownicy where Login = "
     ?>
 </body>
 </html>
