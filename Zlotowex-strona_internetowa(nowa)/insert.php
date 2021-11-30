@@ -20,7 +20,7 @@ if(isset($_POST['submit']))
     $email = $_POST['E-mail'];
     $message = $_POST['Tekst'];
 
-    $insert = mysqli_query($db, "INSERT INTO `Formularz_kontaktowy`(`Imie`, `E-mail`, `Tekst`) VALUES ('$name', '$email', '$message')");
+    $insert = mysqli_queery($db, "INSERT INTO `Formularz_kontaktowy`(`Imie`, `E-mail`, `Tekst`) VALUES ('$name', '$email', '$message')");
 
     if(!$insert)
     {
