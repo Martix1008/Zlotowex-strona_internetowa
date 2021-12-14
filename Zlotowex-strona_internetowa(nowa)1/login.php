@@ -1,3 +1,8 @@
+<?php
+//Start session
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,22 +36,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Strona_Glowna.html">Strona Główna</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Flota.html">Flota</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Cennik.html">Cennik</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Pracownicy.html">Pracownicy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Kontakt.html">Kontakt</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Zaloguj_sie.html">Zaloguj się</a>
+                            <a class="nav-link" href="logout.php">Wyloguj się</a>
                         </li>
                     </ul>
                 </div>
@@ -55,6 +45,7 @@
 
         <?php
             include('db_connection.php');
+            if(isset($_POST['Login'], $_POST['Haslo'])){
             $Login = $_POST['Login'];
             $Haslo = $_POST['Haslo'];
 
@@ -70,13 +61,42 @@
             $count = mysqli_num_rows($result);
 
             if($count == 1){
+                $_SESSION["Login"] = $Login;
                 echo "<h1><center> Udane logowanie </center></h1>";
-                echo "<center><h2><a href='Admin_pannel.php'>Wyświetl zapytania</a></h2></center>";
             }
             else{
                 echo "<h1><center>Błędny login lub haslo.</center></h1>";
             }
+        }else{
+            echo "<h1>Brak loginu lub hasla</h1>";
+        }
         ?>
+
+        <main>
+            <?php
+                include "db_connection.php";
+                if(!$db){
+                    die("Connection failed: " . mysqli_connect_error());
+                }
+
+                if(isset($_SESSION["Login"])){
+                    $sql = "SELECT `id`, `Imie`, `E-mail`, `Tekst` FROM Formularz_kontaktowy";
+                    $result = mysqli_query($db, $sql);
+
+                    if (mysqli_num_rows($result) > 0) {
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo "id: " . $row["id"]. "<br>" . "Name: " . $row["Imie"]. "<br>" . "E-mail: " . $row["E-mail"]. "<br>" . "Tekst: " .  $row["Tekst"] . " " . "<br>" . "<br>";
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+
+                    mysqli_close(!$db);
+                } else{
+                    echo "<h1>Brak loginu lub hasla</h1>";
+                }
+            ?>
+        </main>
 
         <!-- JS Bootstrap script -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
