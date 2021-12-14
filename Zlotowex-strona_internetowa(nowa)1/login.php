@@ -68,7 +68,7 @@ session_start();
                 echo "<h1><center>Błędny login lub haslo.</center></h1>";
             }
         }else{
-            echo "<h1>Brak loginu lub hasla</h1>";
+            echo "<h1><center>Brak loginu lub hasla</center></h1>";
         }
         ?>
 
@@ -93,7 +93,7 @@ session_start();
 
                     mysqli_close(!$db);
                 } else{
-                    echo "<h1>Brak loginu lub hasla</h1>";
+                    echo "<h1><center>Zaloguj się jeszcze raz</center></h1>";
                 }
             ?>
         </main>
