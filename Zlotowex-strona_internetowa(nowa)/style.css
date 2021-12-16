@@ -64,6 +64,15 @@ nav ul li{
     margin-top: 1em;
     width: 90%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+}
+
+.main-login-text{
+    display: flex;
+    flex-direction: column;
 }
 
 .main{

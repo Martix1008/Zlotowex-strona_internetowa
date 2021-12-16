@@ -85,7 +85,7 @@ session_start();
 
                     if (mysqli_num_rows($result) > 0) {
                         while($row = mysqli_fetch_assoc($result)){
-                            echo "id: " . $row["id"]. "<br>" . "Imie: " . $row["Imie"]. "<br>" . "E-mail: " . $row["E-mail"]. "<br>" . "Tekst: " .  $row["Tekst"] . " " . "<br>" . "<br>";
+                            echo "<div class='main-login-text'>id: " . $row["id"]. "<br>" . "Imie: " . $row["Imie"]. "<br>" . "E-mail: " . $row["E-mail"]. "<br>" . "Tekst: " .  $row["Tekst"] . " " . "<br>" . "<br></div>";
                         }
                     } else {
                         echo "0 results";
