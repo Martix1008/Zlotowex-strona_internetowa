@@ -39,7 +39,6 @@ nav ul li{
     font-size: 1.5em;
 }
 
-
 .content{
     margin-right: 0;
 }
@@ -59,9 +58,11 @@ nav ul li{
     height: 500px;
 }
 
-.main-login p{
+
+
+.main-login{
     margin-top: 1em;
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
